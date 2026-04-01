@@ -57,30 +57,28 @@ Trigger: Customer submits wholesale inquiry form
 Actor: Dorsia operations/admin team
 Timing: Immediately upon receiving inquiry
 Next step: Output feeds into confirmation email prompt (P02)
-Customer submits inquiry form → [P01 RUNS]
-→ Structured data generated → P02 (confirmation email) runs
-→ Stored in CRM / internal tracking
+
 
 Problem Being Solved
 Wholesale inquiry data is often submitted in unstructured formats (free text, inconsistent fields, missing labels). 
 Staff must manually read and extract key details, which takes approximately 3–5 minutes per inquiry.
 This leads to:
-inconsistent data entry
-risk of missing contact details
-delays in responding to potential partners
+- inconsistent data entry
+- risk of missing contact details
+- delays in responding to potential partners
 By automating extraction, Dorsia can standardise incoming data and reduce processing time to under 30 seconds per inquiry.
 Pain points addressed:
-Manual data extraction from messy inputs
-Inconsistent formatting across staff
-Risk of missing or misreading key contact information
+- Manual data extraction from messy inputs
+- Inconsistent formatting across staff
+- Risk of missing or misreading key contact information
 
 Automation Potential
 Level: Very High
-Dimension	               Assessment
-Repetitiveness	         Very high — every inquiry requires the same fields
-Data availability	       High — information is provided in form submissions
-Human judgment needed	   Low — task is rule-based extraction
-Integration possibility	 High — output can feed directly into CRM or next prompt
+Dimension	                Assessment
+Repetitiveness	          Very high — every inquiry requires the same fields
+Data availability	        High — information is provided in form submissions
+Human judgment needed	    Low — task is rule-based extraction
+Integration possibility	  High — output can feed directly into CRM or next prompt
 
 Estimated time saving	~80–90% (5 min → <30 sec per inquiry)
 Human-in-the-loop role: Staff quickly review extracted data for accuracy before using it for communication or storing in CRM.
