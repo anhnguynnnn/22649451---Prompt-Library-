@@ -1,16 +1,14 @@
-P01 · Wholesale Inquiry Data Extraction
+# P01 · Wholesale Inquiry Data Extraction
 
-Section: 01 — Customer Onboarding
+**Section:** 01 — Customer Onboarding  
+**Workflow step:** Step 1 of 5  
+**Current version:** v1.1  
+**Status:** 🔄 In progress  
+**Last updated:** 1 April 2026  
 
-Workflow step: Step 1 of 5
+---
 
-Current version: v1.0
-
-Status: In progress
-
-Last updated: 1 April 2026
-
-Prompt Text (v1.1 — current)
+## 📌 Prompt Text (v1.1 — current)
 
 You are an operations assistant at Dorsia, a fashion wholesale and curation platform.
 
@@ -56,101 +54,105 @@ Wholesale inquiry form:
 [INQUIRY_FORM]
 
 
-Intended Workflow or Task
 
-This is the first step in the wholesale inquiry handling workflow.
+---
 
-Trigger: Customer submits wholesale inquiry form
+## 🏢 Intended Workflow or Task
 
-Actor: Dorsia operations/admin team
+This is the **first step** in the wholesale inquiry handling workflow.
 
-Timing: Immediately upon receiving inquiry
+- **Trigger:** Customer submits wholesale inquiry form  
+- **Actor:** Dorsia operations/admin team  
+- **Timing:** Immediately upon receiving inquiry  
+- **Next step:** Output feeds into confirmation email prompt (P02)  
 
-Next step: Output feeds into confirmation email prompt (P02)
+Customer submits inquiry → [P01 RUNS]
+→ Structured data generated → P02 runs
+→ Data stored in CRM
 
 
-Problem Being Solved
+---
 
-Wholesale inquiry data is often submitted in unstructured formats (free text, inconsistent fields, missing labels). 
+## ❗ Problem Being Solved
 
-Staff must manually read and extract key details, which takes approximately 3–5 minutes per inquiry.
+Wholesale inquiry data is often submitted in **unstructured formats** (free text, inconsistent fields, missing labels). Staff must manually read and extract key details, which takes approximately **3–5 minutes per inquiry**.
 
 This leads to:
+- inconsistent data entry  
+- risk of missing contact details  
+- delays in responding to potential partners  
 
-- inconsistent data entry
+By automating extraction, Dorsia can standardise incoming data and reduce processing time to **under 30 seconds per inquiry**.
 
-- risk of missing contact details
+### Pain points addressed:
+- Manual data extraction from messy inputs  
+- Inconsistent formatting across staff  
+- Risk of missing or misreading key contact information  
 
-- delays in responding to potential partners
+---
 
-By automating extraction, Dorsia can standardise incoming data and reduce processing time to under 30 seconds per inquiry.
+## ⚡ Automation Potential
 
-Pain points addressed:
+**Level:** Very High  
 
-- Manual data extraction from messy inputs
+| Dimension | Assessment |
+|-----------|------------|
+| Repetitiveness | Very high — every inquiry requires the same fields |
+| Data availability | High — information is provided in form submissions |
+| Human judgment needed | Low — task is rule-based extraction |
+| Integration possibility | High — output can feed directly into CRM or next prompt |
+| Estimated time saving | ~80–90% (5 min → <30 sec per inquiry) |
 
-- Inconsistent formatting across staff
+**Human-in-the-loop role:**  
+Staff quickly review extracted data for accuracy before using it for communication or storing in CRM.
 
-- Risk of missing or misreading key contact information
+---
 
+## ⚠️ Risks and Limitations
 
-Automation Potential
+| Risk | Level | Mitigation |
+|------|-------|------------|
+| Model incorrectly classifies business type | Medium | Restrict output to "Brand" or "Boutique" only |
+| Missing or unclear input data | Medium | Use "Not provided" fallback |
+| Extraction errors from messy text | Medium | Human verification before use |
+| Over-reliance on AI output without checking | Low–Medium | Require quick manual review before sending email |
 
-Level: Very High
+**Overall risk rating:** MEDIUM — low complexity task but input quality can affect accuracy.
 
-Dimension	                Assessment
+---
 
-Repetitiveness	          Very high — every inquiry requires the same fields
+## 🔄 Version History
 
-Data availability	        High — information is provided in form submissions
+### v1.0 — Initial draft  
+**Date:** 1 April 2026  
 
-Human judgment needed	    Low — task is rule-based extraction
+**Prompt:**  
+Extract key details from inquiry form  
 
-Integration possibility	  High — output can feed directly into CRM or next prompt
+**Output:**  
+Generally accurate but inconsistent formatting and occasional missing fields  
 
-Estimated time saving	~80–90% (5 min → <30 sec per inquiry)
+**Observed effect:**  
+Required manual cleanup before use  
 
-Human-in-the-loop role: Staff quickly review extracted data for accuracy before using it for communication or storing in CRM.
+**Lesson learned:**  
+Need stricter structure and enforced output format  
 
-Risks and Limitations
+---
 
-Risk	                                           Level	      Mitigation
+### v1.1 — Structured JSON output + fallback rules added ✅ Current  
+**Date:** 1 April 2026  
 
-Model incorrectly classifies business type	     Medium	      Restrict output to "Brand" or "Boutique" only
+**Change:**  
+Added strict JSON output format and fallback rules ("Not provided") for missing fields  
 
-Missing or unclear input data 	                 Medium	      Use "Not provided" fallback
+**Output:**  
+More consistent and machine-readable  
 
-Extraction errors from messy text	               Medium	      Human verification before use
+**Observed effect:**  
+Reduced manual editing time  
 
-Over-reliance on AI output without checking	     Low–Medium	  Require quick manual review before sending email
+**Lesson learned:**  
+Structured outputs significantly improve usability in workflows  
 
-Overall risk rating: MEDIUM — low complexity task but input quality can affect accuracy.
-
-
-Version History
-
-v1.0 — Initial draft
-
-Date: 1 April 2026
-
-Prompt: Extract key details from inquiry form
-
-Output: Generally accurate but inconsistent formatting and occasional missing fields
-
-Observed effect: Required manual cleanup before use
-
-Lesson learned: Need stricter structure and enforced output format
-
-
-v1.1 — Structured JSON output (planned)
-
-Date: 1 April 2026
-
-Change: Added strict JSON format + fallback rules
-
-Output: More consistent and machine-readable
-
-
-Observed effect: Reduced manual editing time
-
-Lesson learned: Structured outputs significantly improve usability in workflows
+---
