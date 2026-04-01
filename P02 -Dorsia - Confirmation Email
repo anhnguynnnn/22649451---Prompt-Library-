@@ -16,13 +16,27 @@ Instructions:
 - Do NOT infer or add any information that is not provided
 - If the representative_name is "Not provided", use a neutral greeting (e.g. "Hello")
 - Keep the tone professional, welcoming, and formal
-- Keep the email concise (maximum 120 words)
+- Keep the email concise (maximum 150 words)
 
 Email must include:
 - Acknowledgement that the inquiry has been received
 - Appreciation for their interest in Dorsia
 - A statement that the team will review and respond shortly
-- A clear point of contact: [DORSIA_EMAIL]
+- A clear point of contact: dorsia.contact@gmail.com
+
+Structure guideline:
+- Greeting
+- Thank the sender for their inquiry
+- Confirm receipt of inquiry
+- Inform that the team will respond shortly
+- Provide contact email
+- Professional closing
+
+Dear [Business name],
+Thank you for reaching out to Dorsia... 
+…
+Best regards, 
+Dorsia
 
 Output format:
 
