@@ -18,15 +18,3 @@ The purpose of this library is to show how AI prompts can support operational ef
 
 ---
 
-## 📁 Library Structure
-
-```text
-Prompt-Library/
-├── README.md
-└── Dorsia/
-    ├── P01 - Dorsia - Data Extraction.md
-    ├── P02 - Dorsia - Confirmation Email.md
-    ├── P03 - Dorsia - Inquiry Classification.md
-    ├── P04 - Dorsia - Internal Inquiry Summary.md
-    ├── P05 - Dorsia - Task Allocation.md
-    └── P06 - Dorsia - Follow-up Email.md
