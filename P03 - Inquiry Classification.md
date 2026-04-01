@@ -180,4 +180,4 @@ Explicit decision rules significantly improve reliability and usefulness of AI-d
 
 - **Previous in chain:** P01 — Data Extraction  
 - **Previous in chain:** P02 — Confirmation Email  
-- **Next in chain:** P04 — Internal Summary (optional)
+- **Next in chain:** P04 — Internal Summary (optional) 
