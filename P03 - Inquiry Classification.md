@@ -175,9 +175,3 @@ Reduced decision-making time and improved consistency across inquiries
 Explicit decision rules significantly improve reliability and usefulness of AI-driven classification  
 
 ---
-
-## 🔗 Related Prompts
-
-- **Previous in chain:** P01 — Data Extraction  
-- **Previous in chain:** P02 — Confirmation Email  
-- **Next in chain:** P04 — Internal Summary (optional) 
